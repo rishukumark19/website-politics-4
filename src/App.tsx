@@ -12,7 +12,7 @@ import ContactUs from './pages/ContactUs';
 function App() {
   return (
     <LanguageProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
