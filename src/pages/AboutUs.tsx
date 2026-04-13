@@ -28,7 +28,7 @@ const AboutUs = () => {
           <div className="lg:col-span-5 relative sticky top-32">
             <Reveal>
               <div className="aspect-[3/4] rounded-3xl overflow-hidden editorial-shadow">
-                <img alt="Sanjeev Singh Official Portrait" className="w-full h-full object-cover" src="/images/sanjeev-portrait.jpg" />
+                <img alt="Sanjeev Singh Official Portrait" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/sanjeev-portrait.jpg`} />
               </div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 saffron-gradient rounded-3xl -z-10 opacity-20 hidden md:block" />
             </Reveal>

@@ -6,9 +6,9 @@ const Videos = () => {
   const { t } = useLanguage();
 
   const videos = [
-    { img: '/images/location_1.jpg', titleKey: 'videos.v1', dateKey: 'videos.v1_date' },
-    { img: '/images/gallery_2.jpg', titleKey: 'videos.v2', dateKey: 'videos.v2_date' },
-    { img: '/images/carousel_2.jpg', titleKey: 'videos.v3', dateKey: 'videos.v3_date' },
+    { img: `${import.meta.env.BASE_URL}images/location_1.jpg`, titleKey: 'videos.v1', dateKey: 'videos.v1_date' },
+    { img: `${import.meta.env.BASE_URL}images/gallery_2.jpg`, titleKey: 'videos.v2', dateKey: 'videos.v2_date' },
+    { img: `${import.meta.env.BASE_URL}images/carousel_2.jpg`, titleKey: 'videos.v3', dateKey: 'videos.v3_date' },
   ];
 
   return (

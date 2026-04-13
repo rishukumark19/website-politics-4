@@ -8,11 +8,11 @@ const Home = () => {
   const { t } = useLanguage();
 
   const slides = [
-    { image: '/images/carousel_1.jpg', titleKey: 'home.slide1.title', subKey: 'home.slide1.sub' },
-    { image: '/images/location_1.jpg', titleKey: 'home.slide2.title', subKey: 'home.slide2.sub' },
-    { image: '/images/location_2.jpg', titleKey: 'home.slide3.title', subKey: 'home.slide3.sub' },
-    { image: '/images/location_3.jpg', titleKey: 'home.slide4.title', subKey: 'home.slide4.sub' },
-    { image: '/images/singh-mansion.jpg', titleKey: 'home.slide5.title', subKey: 'home.slide5.sub' },
+    { image: `${import.meta.env.BASE_URL}images/carousel_1.jpg`, titleKey: 'home.slide1.title', subKey: 'home.slide1.sub' },
+    { image: `${import.meta.env.BASE_URL}images/location_1.jpg`, titleKey: 'home.slide2.title', subKey: 'home.slide2.sub' },
+    { image: `${import.meta.env.BASE_URL}images/location_2.jpg`, titleKey: 'home.slide3.title', subKey: 'home.slide3.sub' },
+    { image: `${import.meta.env.BASE_URL}images/location_3.jpg`, titleKey: 'home.slide4.title', subKey: 'home.slide4.sub' },
+    { image: `${import.meta.env.BASE_URL}images/singh-mansion.jpg`, titleKey: 'home.slide5.title', subKey: 'home.slide5.sub' },
   ];
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const Home = () => {
               <div className="relative group">
                 <div className="absolute inset-0 bg-orange-100 rounded-2xl transform rotate-3 -z-10 group-hover:rotate-6 transition-transform" />
                 <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                  <img src="/images/sanjeev-portrait.jpg" alt="Sanjeev Singh" className="w-full h-auto object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700" />
+                  <img src={`${import.meta.env.BASE_URL}images/sanjeev-portrait.jpg`} alt="Sanjeev Singh" className="w-full h-auto object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
             </Reveal>
@@ -165,7 +165,7 @@ const Home = () => {
           <Reveal>
             <div className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden editorial-shadow">
-                <img alt="Dhanbad" className="w-full h-full object-cover" src="/images/sanjeev-profile.jpg" />
+                <img alt="Dhanbad" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/sanjeev-profile.jpg`} />
               </div>
               <div className="absolute -top-6 -right-6 w-32 h-32 saffron-gradient rounded-3xl -z-10 opacity-20" />
             </div>
@@ -200,21 +200,21 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Reveal delay={50}>
               <div className="space-y-4">
-                <img alt="Field Visit 1" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src="/images/location_1.jpg" />
-                <img alt="Field Visit 2" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src="/images/location_2.jpg" />
+                <img alt="Field Visit 1" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src={`${import.meta.env.BASE_URL}images/location_1.jpg`} />
+                <img alt="Field Visit 2" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src={`${import.meta.env.BASE_URL}images/location_2.jpg`} />
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <img alt="Public Program 1" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src="/images/location_3.jpg" />
+              <img alt="Public Program 1" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src={`${import.meta.env.BASE_URL}images/location_3.jpg`} />
             </Reveal>
             <Reveal delay={150}>
               <div className="space-y-4">
-                <img alt="Community Interaction" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src="/images/gallery_1.jpg" />
-                <img alt="Local Event" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src="/images/gallery_2.jpg" />
+                <img alt="Community Interaction" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src={`${import.meta.env.BASE_URL}images/gallery_1.jpg`} />
+                <img alt="Local Event" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src={`${import.meta.env.BASE_URL}images/gallery_2.jpg`} />
               </div>
             </Reveal>
             <Reveal delay={200}>
-              <img alt="Leadership Moment" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src="/images/gallery_3.jpg" />
+              <img alt="Leadership Moment" className="w-full rounded-2xl editorial-shadow hover:scale-[1.02] transition-transform" src={`${import.meta.env.BASE_URL}images/gallery_3.jpg`} />
             </Reveal>
           </div>
         </div>
@@ -292,7 +292,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="bg-slate-50 rounded-2xl mb-6 overflow-hidden flex-grow relative border border-slate-100">
-                  <img src="/images/location_3.jpg" className="w-full h-32 object-cover" alt="Insta Post" />
+                  <img src={`${import.meta.env.BASE_URL}images/location_3.jpg`} className="w-full h-32 object-cover" alt="Insta Post" />
                   <div className="p-4">
                     <p className="text-sm text-on-surface">{t('home.social.ig_post')}</p>
                   </div>
