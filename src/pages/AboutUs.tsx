@@ -25,17 +25,24 @@ const AboutUs = () => {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Portrait */}
-          <div className="lg:col-span-5 relative lg:sticky top-32">
+          <div className="lg:col-span-5 relative lg:sticky lg:top-32 mb-12 lg:mb-0">
             <Reveal>
-              <div className="aspect-[3/4] rounded-3xl overflow-hidden editorial-shadow">
-                <img alt="Sanjeev Singh Official Portrait" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/sanjeev-portrait.jpg`} />
+              <div className="relative">
+                <div className="aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden editorial-shadow relative z-10">
+                  <img 
+                    alt="Sanjeev Singh Official Portrait" 
+                    className="w-full h-full object-cover" 
+                    src={`${import.meta.env.BASE_URL}images/sanjeev-portrait.jpg`} 
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/10 rounded-3xl -z-10" />
+                <div className="absolute -bottom-6 -right-6 w-48 h-48 saffron-gradient rounded-3xl -z-10 opacity-20 hidden lg:block" />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 saffron-gradient rounded-3xl -z-10 opacity-20 hidden md:block" />
             </Reveal>
           </div>
 
           {/* Content */}
-          <div className="lg:col-span-7 space-y-12">
+          <div className="lg:col-span-7 space-y-12 relative z-10">
             <div>
               <Reveal><h2 className="text-3xl font-headline font-bold text-on-background mb-6">{t('about.origins.title')}</h2></Reveal>
               <div className="prose prose-lg text-on-surface-variant max-w-none space-y-6">
