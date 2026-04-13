@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
@@ -12,7 +12,7 @@ import ContactUs from './pages/ContactUs';
 function App() {
   return (
     <LanguageProvider>
-      <Router basename={import.meta.env.BASE_URL}>
+      <Router>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>

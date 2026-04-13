@@ -25,7 +25,7 @@ const AboutUs = () => {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Portrait */}
-          <div className="lg:col-span-5 relative sticky top-32">
+          <div className="lg:col-span-5 relative lg:sticky top-32">
             <Reveal>
               <div className="aspect-[3/4] rounded-3xl overflow-hidden editorial-shadow">
                 <img alt="Sanjeev Singh Official Portrait" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/sanjeev-portrait.jpg`} />
