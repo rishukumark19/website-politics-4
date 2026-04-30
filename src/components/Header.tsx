@@ -43,19 +43,21 @@ const Header = () => {
 
             {/* Brand */}
             <NavLink to="/" className="flex items-center gap-3 group relative z-10">
-              <div className={`flex items-center justify-center rounded-lg font-headline font-black text-white transition-all duration-500 bg-gradient-to-br from-[#FF9933] to-[#d47400] shadow-lg shadow-orange-500/25 ${
-                scrolled ? 'w-8 h-8 text-xs' : 'w-9 h-9 text-sm'
-              }`}>
+              <div className={`flex items-center justify-center rounded-xl font-headline font-black transition-all duration-500 shadow-xl ${
+                scrolled 
+                  ? 'bg-gradient-to-br from-[#FF9933] to-[#d47400] text-white w-9 h-9 text-xs shadow-orange-500/30' 
+                  : 'bg-white text-[#FF9933] w-11 h-11 text-base shadow-black/10'
+              } group-hover:scale-110`}>
                 S
               </div>
               <div className="flex flex-col leading-none">
-                <span className={`font-headline font-extrabold tracking-[-0.03em] transition-all duration-500 ${
-                  scrolled ? 'text-[#1a1a2e] text-[15px]' : 'text-white text-[17px]'
+                <span className={`font-headline font-black tracking-tight transition-all duration-500 ${
+                  scrolled ? 'text-[#1a1a2e] text-[16px]' : 'text-white text-[19px]'
                 }`}>
                   {lang === 'hi' ? 'संजीव सिंह' : 'Sanjeev Singh'}
                 </span>
-                <span className={`text-[9px] font-medium tracking-[0.18em] uppercase mt-[2px] transition-all duration-500 ${
-                  scrolled ? 'text-gray-400' : 'text-white/50'
+                <span className={`text-[10px] font-black tracking-[0.25em] uppercase mt-[3px] transition-all duration-500 ${
+                  scrolled ? 'text-[#FF9933]' : 'text-white/90'
                 }`}>
                   {t('nav.subtitle')}
                 </span>
@@ -70,17 +72,17 @@ const Header = () => {
                   to={link.to}
                   end={link.to === '/'}
                   className={({ isActive }) => {
-                    const base = `relative px-4 py-2 text-[12px] font-semibold tracking-[0.08em] uppercase transition-all duration-300 rounded-md`;
-                    if (isActive) return `${base} ${scrolled ? 'text-[#FF9933]' : 'text-white'}`;
-                    return `${base} ${scrolled ? 'text-gray-400 hover:text-[#1a1a2e]' : 'text-white/50 hover:text-white'}`;
+                    const base = `relative px-4 py-2.5 text-[11px] font-bold tracking-[0.12em] uppercase transition-all duration-500 rounded-lg overflow-hidden group/link`;
+                    if (isActive) return `${base} ${scrolled ? 'text-[#FF9933] bg-orange-50/50 shadow-sm' : 'text-white bg-white/20'}`;
+                    return `${base} ${scrolled ? 'text-gray-500 hover:text-[#FF9933] hover:bg-orange-50/40' : 'text-white hover:bg-white/10'}`;
                   }}
                 >
                   {({ isActive }) => (
                     <>
-                      {link.label}
-                      <span className={`absolute bottom-0.5 left-1/2 -translate-x-1/2 h-[2px] rounded-full transition-all duration-300 ${
-                        isActive ? 'w-4 bg-[#FF9933]' : 'w-0'
-                      }`} />
+                      <span className="relative z-10">{link.label}</span>
+                      <span className={`absolute bottom-0 left-0 h-[2.5px] transition-all duration-500 ${
+                        isActive ? 'w-full' : 'w-0 group-hover/link:w-full'
+                      } ${scrolled ? 'bg-[#FF9933]' : 'bg-white'}`} />
                     </>
                   )}
                 </NavLink>
@@ -97,7 +99,7 @@ const Header = () => {
                 className={`px-3 py-1.5 text-[11px] font-bold tracking-wider uppercase rounded-md border transition-all duration-300 ${
                   scrolled
                     ? 'border-gray-200 text-gray-500 hover:text-[#FF9933] hover:border-[#FF9933]'
-                    : 'border-white/20 text-white/60 hover:text-white hover:border-white/40'
+                    : 'border-white/30 text-white hover:bg-white/10 hover:border-white/60'
                 }`}
                 aria-label="Toggle language"
               >
@@ -107,7 +109,11 @@ const Header = () => {
               {/* CTA */}
               <a
                 href="tel:+919431125166"
-                className="ml-2 flex items-center gap-2 px-5 py-2 bg-[#FF9933] text-white text-[11px] font-bold tracking-[0.06em] uppercase rounded-md hover:bg-[#e58529] transition-all duration-300 shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30"
+                className={`ml-2 flex items-center gap-2 px-5 py-2 text-[11px] font-bold tracking-[0.06em] uppercase rounded-md transition-all duration-300 shadow-md ${
+                  scrolled
+                    ? 'bg-[#FF9933] text-white hover:bg-[#e58529] shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30 border-b-2 border-transparent hover:border-[#138808]'
+                    : 'bg-white text-[#FF9933] hover:bg-gray-50 shadow-black/10 hover:shadow-lg border-b-2 border-transparent hover:border-[#138808]'
+                }`}
               >
                 <Phone size={12} strokeWidth={2.5} />
                 <span className="hidden xl:inline">+91 94311 25166</span>
@@ -135,13 +141,13 @@ const Header = () => {
                 aria-label="Toggle navigation"
               >
                 <span className={`block w-5 h-[1.5px] rounded-full transition-all duration-400 origin-center ${
-                  isMobileMenuOpen ? 'rotate-45 translate-y-[6.5px] bg-gray-800' : scrolled ? 'bg-gray-600' : 'bg-white'
+                  isMobileMenuOpen ? 'rotate-45 translate-y-[6.5px] bg-[#FF9933]' : scrolled ? 'bg-[#FF9933]' : 'bg-white'
                 }`} />
-                <span className={`block w-5 h-[1.5px] rounded-full transition-all duration-300 ${
-                  isMobileMenuOpen ? 'opacity-0 scale-0' : scrolled ? 'bg-gray-600' : 'bg-white'
+                <span className={`block w-4 h-[1.5px] rounded-full transition-all duration-300 ml-auto ${
+                  isMobileMenuOpen ? 'opacity-0 scale-0' : scrolled ? 'bg-[#FF9933]' : 'bg-white'
                 }`} />
                 <span className={`block w-5 h-[1.5px] rounded-full transition-all duration-400 origin-center ${
-                  isMobileMenuOpen ? '-rotate-45 -translate-y-[6.5px] bg-gray-800' : scrolled ? 'bg-gray-600' : 'bg-white'
+                  isMobileMenuOpen ? '-rotate-45 -translate-y-[6.5px] bg-[#FF9933]' : scrolled ? 'bg-[#FF9933]' : 'bg-white'
                 }`} />
               </button>
             </div>
@@ -159,9 +165,11 @@ const Header = () => {
             isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
           }`}
         />
-        <div className={`absolute top-0 right-0 w-full max-w-[340px] h-full bg-white flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        <div className={`absolute top-0 right-0 w-full max-w-[340px] h-full bg-white flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] border-l-4 border-[#FF9933] ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
+          {/* Subtle Green Top Bar for Mobile */}
+          <div className="h-1.5 w-full bg-[#138808]" />
           {/* Mobile header */}
           <div className="flex items-center justify-between px-6 h-[72px] border-b border-gray-100 shrink-0">
             <span className="font-headline font-extrabold text-[15px] text-[#1a1a2e] tracking-tight">{t('nav.menu')}</span>
