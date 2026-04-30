@@ -9,7 +9,7 @@
       // This script takes the current url and converts the path and query
       // string into just a query string, and then redirects the browser
       // to the custom 404.html page or index.html page.
-      var pathSegmentsToKeep = 1;
+      var pathSegmentsToKeep = window.location.hostname.includes('github.io') ? 1 : 0;
 
       var l = window.location;
       l.replace(

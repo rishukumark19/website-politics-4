@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# Sanjeev Singh Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website project for Sanjeev Singh, built with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Live URLs
+- GitHub Pages: https://rishukumark19.github.io/website-politics-4/
+- Custom domain target: https://sanjeev-singh.in
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+This project is a modern political/public-profile website designed to present Sanjeev Singh’s biography, public issues, updates, and campaign/public communication in a clean editorial format.
 
-## React Compiler
+## Tech Stack
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Pages
+- Home
+- About / Biography
+- Issues
+- News & Updates
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Local Development
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Production Build
+```bash
+npm run build
 ```
+
+## Deployment
+This site is deployed using GitHub Pages and GitHub Actions.
+
+## Domain Setup
+The project is configured to support the custom domain:
+`sanjeev-singh.in`
+
+DNS records should point the apex domain to GitHub Pages A records, and `www` should CNAME to:
+`rishukumark19.github.io`
+
+## Notes
+- Ensure Vite `base` and React Router `basename` match the deployment path.
+- Keep SPA routing fallback configured for GitHub Pages.
