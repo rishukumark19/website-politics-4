@@ -42,25 +42,22 @@ const Header = () => {
           }`}>
 
             {/* Brand */}
-            <NavLink to="/" className="flex items-center gap-3 group relative z-10">
-              <div className={`flex items-center justify-center rounded-xl font-headline font-black transition-all duration-500 shadow-xl ${
-                scrolled 
-                  ? 'bg-gradient-to-br from-[#FF9933] to-[#d47400] text-white w-9 h-9 text-xs shadow-orange-500/30' 
-                  : 'bg-white text-[#FF9933] w-11 h-11 text-base shadow-black/10'
-              } group-hover:scale-110`}>
-                S
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className={`font-headline font-black tracking-tight transition-all duration-500 ${
-                  scrolled ? 'text-[#1a1a2e] text-[16px]' : 'text-white text-[19px]'
+            <NavLink to="/" className="flex items-center group relative z-10">
+              <div className="flex flex-col">
+                <span className={`font-headline font-black tracking-[0.2em] transition-all duration-500 leading-tight uppercase ${
+                  scrolled ? 'text-[#1a1a2e] text-[20px]' : 'text-white text-[26px]'
                 }`}>
-                  {lang === 'hi' ? 'संजीव सिंह' : 'Sanjeev Singh'}
+                  {lang === 'hi' ? 'संजीव सिंह' : 'SANJEEV SINGH'}
                 </span>
-                <span className={`text-[10px] font-black tracking-[0.25em] uppercase mt-[3px] transition-all duration-500 ${
-                  scrolled ? 'text-[#FF9933]' : 'text-white/90'
-                }`}>
-                  {t('nav.subtitle')}
-                </span>
+                <div className="flex items-center gap-2 mt-1">
+                  <div className={`h-[1px] transition-all duration-500 ${scrolled ? 'w-4 bg-[#FF9933]' : 'w-6 bg-white/40'}`} />
+                  <span className={`text-[10px] font-black tracking-[0.4em] uppercase transition-all duration-500 shrink-0 ${
+                    scrolled ? 'text-[#FF9933]' : 'text-white/80'
+                  }`}>
+                    {t('nav.subtitle')}
+                  </span>
+                  <div className={`h-[1px] transition-all duration-500 ${scrolled ? 'w-4 bg-[#FF9933]' : 'w-6 bg-white/40'}`} />
+                </div>
               </div>
             </NavLink>
 
