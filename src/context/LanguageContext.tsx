@@ -155,7 +155,24 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.submit': 'Submit Request',
 
     // Footer
-    'footer.rights': 'All rights reserved.',
+    'footer.name': 'Sanjeev Singh',
+    'footer.desc': 'A voice for the workers, a vision for the youth, and a lifetime of service for Dhanbad. Join us in shaping the future of Jharkhand.',
+    'footer.office': 'Janta Mazdoor Sangh Office, Dhanbad',
+    'footer.quick_links': 'Quick Links',
+    'footer.bio': 'Biography',
+    'footer.initiatives': 'Initiatives',
+    'footer.gallery': 'Gallery',
+    'footer.contact': 'Contact',
+    'footer.connect': 'Connect with Us',
+    'footer.name_ph': 'Your Name',
+    'footer.email_ph': 'Email Address',
+    'footer.message_ph': 'Your Message',
+    'footer.send': 'Send Message',
+    'footer.dev_by': 'Developed and Maintained by CrossTech',
+    'footer.rights': 'All Rights Reserved.',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms of Service',
+    'footer.press_kit': 'Press Kit',
   },
 
   hi: {
@@ -293,7 +310,24 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.submit': 'अनुरोध भेजें',
 
     // Footer
+    'footer.name': 'संजीव सिंह',
+    'footer.desc': 'श्रमिकों के लिए एक आवाज़, युवाओं के लिए एक दृष्टि, और धनबाद के लिए जीवन भर की सेवा। झारखंड के भविष्य को आकार देने में हमारे साथ जुड़ें।',
+    'footer.office': 'जनता मज़दूर संघ कार्यालय, धनबाद',
+    'footer.quick_links': 'त्वरित लिंक',
+    'footer.bio': 'जीवनी',
+    'footer.initiatives': 'पहल',
+    'footer.gallery': 'गैलरी',
+    'footer.contact': 'संपर्क',
+    'footer.connect': 'हमसे जुड़ें',
+    'footer.name_ph': 'आपका नाम',
+    'footer.email_ph': 'ईमेल पता',
+    'footer.message_ph': 'आपका संदेश',
+    'footer.send': 'संदेश भेजें',
+    'footer.dev_by': 'CrossTech द्वारा विकसित एवं अनुरक्षित',
     'footer.rights': 'सर्वाधिकार सुरक्षित।',
+    'footer.privacy': 'प्राइवेसी पॉलिसी',
+    'footer.terms': 'सेवा की शर्तें',
+    'footer.press_kit': 'प्रेस किट',
   },
 };
 
