@@ -9,19 +9,19 @@ const PressReleases = () => {
     <div className="bg-white min-h-screen pt-[72px]">
       {/* Editorial Header */}
       <section className="bg-[#1a1a2e] py-32 px-8 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#FF9933]/5 -skew-x-12 translate-x-32" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#ff7e54]/5 -skew-x-12 translate-x-32" />
         <div className="max-w-[1400px] mx-auto relative z-10 text-center">
           <Reveal>
             <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="h-px w-12 bg-[#FF9933]" />
-              <span className="text-[11px] font-black text-[#FF9933] uppercase tracking-[0.5em]">{t('press.tag')}</span>
-              <div className="h-px w-12 bg-[#FF9933]" />
+              <div className="h-px w-12 bg-[#ff7e54]" />
+              <span className="text-[11px] font-black text-[#ff7e54] uppercase tracking-[0.5em]">{t('press.tag')}</span>
+              <div className="h-px w-12 bg-[#ff7e54]" />
             </div>
           </Reveal>
           <Reveal delay={100}>
             <h1 className="text-5xl md:text-8xl font-headline font-black text-white max-w-5xl mx-auto leading-[1.1] tracking-tight uppercase">
               {t('press.title1')} <br />
-              <span className="text-[#FF9933]">{t('press.title2')}</span>
+              <span className="text-[#ff7e54]">{t('press.title2')}</span>
             </h1>
           </Reveal>
           <Reveal delay={200}>
@@ -44,11 +44,11 @@ const PressReleases = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl font-headline font-black text-[#1a1a2e] uppercase tracking-tight">{t('press.timeline')}</h3>
-                    <p className="text-[10px] font-black text-[#FF9933] uppercase tracking-[0.4em] mt-2">{t('press.powered')}</p>
+                    <p className="text-[10px] font-black text-[#ff7e54] uppercase tracking-[0.4em] mt-2">{t('press.powered')}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 px-8 py-3 bg-[#1a1a2e] text-white rounded-full">
-                  <span className="w-2 h-2 bg-[#FF9933] rounded-full animate-pulse shadow-[0_0_10px_#FF9933]" />
+                  <span className="w-2 h-2 bg-[#ff7e54] rounded-full animate-pulse shadow-[0_0_10px_#ff7e54]" />
                   <span className="text-[10px] font-black uppercase tracking-[0.4em]">{t('press.stream')}</span>
                 </div>
               </div>
@@ -73,11 +73,11 @@ const PressReleases = () => {
                     target="_blank" rel="noreferrer"
                     className="inline-flex items-center gap-8 group"
                   >
-                    <div className="w-20 h-20 rounded-full bg-[#1a1a2e] flex items-center justify-center text-white group-hover:bg-[#FF9933] transition-colors shadow-2xl">
+                    <div className="w-20 h-20 rounded-full bg-[#1a1a2e] flex items-center justify-center text-white group-hover:bg-[#ff7e54] transition-colors shadow-2xl">
                       <span className="material-symbols-outlined text-3xl">open_in_new</span>
                     </div>
                     <div className="text-left space-y-1">
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#FF9933]">Visit Digital Hub</span>
+                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#ff7e54]">Visit Digital Hub</span>
                       <p className="text-xl font-headline font-black text-[#1a1a2e] uppercase tracking-wider">{t('press.archive')}</p>
                     </div>
                   </a>
@@ -89,7 +89,7 @@ const PressReleases = () => {
           <Reveal delay={200}>
             <div className="mt-32 text-center">
               <Link to="/" className="inline-flex items-center gap-4 text-[#1a1a2e] group">
-                <div className="w-12 h-12 rounded-full border-2 border-[#1a1a2e]/10 flex items-center justify-center group-hover:border-[#FF9933] group-hover:text-[#FF9933] transition-all">
+                <div className="w-12 h-12 rounded-full border-2 border-[#1a1a2e]/10 flex items-center justify-center group-hover:border-[#ff7e54] group-hover:text-[#ff7e54] transition-all">
                   <span className="material-symbols-outlined">west</span>
                 </div>
                 <span className="text-[10px] font-black uppercase tracking-[0.4em]">{t('press.back')}</span>

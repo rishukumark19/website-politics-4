@@ -30,7 +30,7 @@ export default {
         "inverse-primary": "#ffb77a",
         "primary-fixed": "#ffdcc2",
         "surface-bright": "#faf8ff",
-        "primary-container": "#ff9933",
+        "primary-container": "#ff7e54",
         "outline": "#887364",
         "on-surface-variant": "#554336",
         "on-secondary-fixed-variant": "#3239a3",

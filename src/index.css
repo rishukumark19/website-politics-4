@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#f8f9fa] font-body text-[#1a1a2e] selection:bg-[#FF9933]/20 selection:text-[#1a1a2e];
+    @apply bg-[#f8f9fa] font-body text-[#1a1a2e] selection:bg-[#ff7e54]/20 selection:text-[#1a1a2e];
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -25,7 +25,7 @@
   }
 
   .saffron-gradient {
-    background: linear-gradient(135deg, #FF9933 0%, #e07800 100%);
+    background: linear-gradient(135deg, #ff7e54 0%, #e56233 100%);
   }
 
   .navy-depth {
@@ -49,17 +49,13 @@
 
 /* ─── Navigation Refinements ─── */
 .nav-top {
-  background: #FF9933;
-  border-bottom: 4px solid #138808;
+  background: #ff7e54;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .nav-scrolled {
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid #FF9933;
+  background: #ff7e54;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ─── Hindi Font Refinement ─── */

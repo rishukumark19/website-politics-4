@@ -15,13 +15,13 @@ const Videos = () => {
     <div className="bg-white min-h-screen pt-[72px]">
       {/* Cinematic Header */}
       <section className="bg-[#1a1a2e] py-32 px-8 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#FF9933]/5 -skew-x-12 translate-x-32" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#ff7e54]/5 -skew-x-12 translate-x-32" />
         <div className="max-w-[1400px] mx-auto relative z-10 text-center">
           <Reveal>
             <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="h-px w-12 bg-[#FF9933]" />
-              <span className="text-[11px] font-black text-[#FF9933] uppercase tracking-[0.5em]">{t('videos.tag')}</span>
-              <div className="h-px w-12 bg-[#FF9933]" />
+              <div className="h-px w-12 bg-[#ff7e54]" />
+              <span className="text-[11px] font-black text-[#ff7e54] uppercase tracking-[0.5em]">{t('videos.tag')}</span>
+              <div className="h-px w-12 bg-[#ff7e54]" />
             </div>
           </Reveal>
           <Reveal delay={100}>
@@ -62,10 +62,10 @@ const Videos = () => {
                   </div>
                 </div>
                 <div className="space-y-3 px-2">
-                  <h4 className="text-2xl font-headline font-black text-[#1a1a2e] uppercase tracking-tight leading-snug group-hover:text-[#FF9933] transition-colors">
+                  <h4 className="text-2xl font-headline font-black text-[#1a1a2e] uppercase tracking-tight leading-snug group-hover:text-[#ff7e54] transition-colors">
                     {t(vid.titleKey)}
                   </h4>
-                  <div className="h-0.5 w-12 bg-[#FF9933]/20 group-hover:w-full transition-all duration-700" />
+                  <div className="h-0.5 w-12 bg-[#ff7e54]/20 group-hover:w-full transition-all duration-700" />
                 </div>
               </div>
             </Reveal>
@@ -79,7 +79,7 @@ const Videos = () => {
                 <span className="material-symbols-outlined text-3xl">home</span>
               </div>
               <div className="text-left space-y-1">
-                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#FF9933]">Return to Main</span>
+                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#ff7e54]">Return to Main</span>
                 <p className="text-xl font-headline font-black text-[#1a1a2e] uppercase tracking-wider">{t('videos.back')}</p>
               </div>
             </Link>
